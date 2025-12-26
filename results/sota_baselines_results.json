@@ -1,0 +1,15 @@
+{
+  "openai_embeddings": {
+    "method": "OpenAI text-embedding-3-large",
+    "n_samples": 400,
+    "faithful_mean": 0.6050093629505353,
+    "hallucinated_mean": 0.4020399057724934,
+    "coverage": 0.98,
+    "fpr": 1.0,
+    "fpr_ci": [
+      0.9630051925239981,
+      0.9999999999999999
+    ],
+    "threshold": 0.16365523351609662
+  }
+}

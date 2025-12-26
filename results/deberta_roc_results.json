@@ -1,0 +1,16 @@
+{
+  "model": "DeBERTa-v3-large-MNLI",
+  "n_faithful": 200,
+  "n_hallucinated": 200,
+  "faithful_mean": 0.9157832930388394,
+  "hallucinated_mean": 0.4008054474522214,
+  "separation": 0.5149778455866181,
+  "threshold_95_recall": 0.9996834188699723,
+  "tpr_at_95": 0.95,
+  "fpr_at_95_recall": 1.0,
+  "fpr_ci": [
+    0.9811539940816791,
+    1.0
+  ],
+  "auc": 0.8103499999999999
+}

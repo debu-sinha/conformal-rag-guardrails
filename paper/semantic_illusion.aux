@@ -1,0 +1,107 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{lewis2020retrieval}
+\citation{manakul2023selfcheckgpt}
+\citation{xiang2025redeep}
+\citation{vovk2005algorithmic}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{manakul2023selfcheckgpt}
+\citation{min2023factscore}
+\citation{xiang2025redeep}
+\citation{zhang2025embeddingdistance}
+\citation{sriramanan2024llmcheck}
+\citation{kamath2020selective}
+\citation{yadkori2024conformal}
+\citation{li2025implicitsemantics}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Formulation}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Nonconformity Scores}{2}{subsection.3.2}\protected@file@percent }
+\citation{vovk2005algorithmic}
+\citation{li2023halueval}
+\citation{manakul2023selfcheckgpt}
+\citation{wang2023ragtruth}
+\citation{vovk2005algorithmic}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Conformal Calibration}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Setup}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Main Results}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces CRG performance at 95\% target coverage. On synthetic data (NQ), the method achieves near-perfect separation. On real data (HaluEval), the FPR degrades to 100\%.}}{4}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:main_results}{{1}{4}{CRG performance at 95\% target coverage. On synthetic data (NQ), the method achieves near-perfect separation. On real data (HaluEval), the FPR degrades to 100\%}{table.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Score distributions reveal the Semantic Illusion.} \textbf  {Left:} On Natural Questions (synthetic), faithful and hallucinated responses have clearly separated distributions. \textbf  {Right:} On HaluEval (real LLM hallucinations), distributions completely overlap---embedding scores cannot distinguish them.}}{4}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:distributions}{{1}{4}{\textbf {Score distributions reveal the Semantic Illusion.} \textbf {Left:} On Natural Questions (synthetic), faithful and hallucinated responses have clearly separated distributions. \textbf {Right:} On HaluEval (real LLM hallucinations), distributions completely overlap---embedding scores cannot distinguish them}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Generalization Across Model Architectures}{4}{subsection.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {t-SNE visualizations of embedding space.} \textbf  {Left:} On Natural Questions, faithful (blue) and hallucinated (red) responses form distinct clusters in embedding space. \textbf  {Right:} On HaluEval, the two classes are completely intermingled---embeddings cannot provide a decision boundary, regardless of threshold choice.}}{5}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:tsne}{{2}{5}{\textbf {t-SNE visualizations of embedding space.} \textbf {Left:} On Natural Questions, faithful (blue) and hallucinated (red) responses form distinct clusters in embedding space. \textbf {Right:} On HaluEval, the two classes are completely intermingled---embeddings cannot provide a decision boundary, regardless of threshold choice}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {RAGTruth confirms the pattern across multiple LLMs.} Score distributions on RAGTruth (Llama-2, Mistral, GPT-4) show substantial overlap between faithful and hallucinated responses. The multi-model nature of RAGTruth demonstrates that the Semantic Illusion is not specific to any single model architecture.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:ragtruth}{{3}{5}{\textbf {RAGTruth confirms the pattern across multiple LLMs.} Score distributions on RAGTruth (Llama-2, Mistral, GPT-4) show substantial overlap between faithful and hallucinated responses. The multi-model nature of RAGTruth demonstrates that the Semantic Illusion is not specific to any single model architecture}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}The DeBERTa Paradox: AUC vs. Coverage}{6}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:deberta}{{4.4}{6}{The DeBERTa Paradox: AUC vs. Coverage}{subsection.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces DeBERTa-v3-large scores on HaluEval. Note the massive standard deviation in the hallucinated class.}}{6}{table.caption.5}\protected@file@percent }
+\newlabel{tab:deberta_stats}{{2}{6}{DeBERTa-v3-large scores on HaluEval. Note the massive standard deviation in the hallucinated class}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}The Solution: LLM Reasoning}{6}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Ablation: Calibration Set Size}{6}{subsection.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Effect of calibration set size on coverage and FPR (Natural Questions). Larger calibration sets provide tighter coverage guarantees with lower variance, but even $n=300$ achieves valid coverage.}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:calibration_ablation}{{3}{7}{Effect of calibration set size on coverage and FPR (Natural Questions). Larger calibration sets provide tighter coverage guarantees with lower variance, but even $n=300$ achieves valid coverage}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Ablation study on HaluEval. Learned weighting improves average-case metrics (AUC) but cannot improve worst-case (conformal FPR). Only reasoning-based approaches break the 100\% FPR barrier.}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:ablation}{{4}{7}{Ablation study on HaluEval. Learned weighting improves average-case metrics (AUC) but cannot improve worst-case (conformal FPR). Only reasoning-based approaches break the 100\% FPR barrier}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Ablation: Ensemble Methods}{7}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Compute Cost Analysis}{7}{subsection.4.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Compute cost comparison for hallucination detection methods. CRG provides 150$\times $ speedup over LLM-based judging, but fails on RLHF-aligned outputs.}}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:cost}{{5}{7}{Compute cost comparison for hallucination detection methods. CRG provides 150$\times $ speedup over LLM-based judging, but fails on RLHF-aligned outputs}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{8}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Limitations}{8}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Broader Impact}{8}{section.7}\protected@file@percent }
+\citation{xiang2025redeep}
+\citation{vovk2005algorithmic}
+\bibstyle{plain}
+\bibcite{vovk2005algorithmic}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{9}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{9}{section.9}\protected@file@percent }
+\bibcite{angelopoulos2021gentle}{2}
+\bibcite{lei2018distribution}{3}
+\bibcite{romano2019conformalized}{4}
+\bibcite{barber2021predictive}{5}
+\bibcite{kamath2020selective}{6}
+\bibcite{yadkori2024conformal}{7}
+\bibcite{quach2024conformal}{8}
+\bibcite{kumar2023conformal}{9}
+\bibcite{lewis2020retrieval}{10}
+\bibcite{karpukhin2020dpr}{11}
+\bibcite{izacard2021distilling}{12}
+\bibcite{borgeaud2022retro}{13}
+\bibcite{guu2020realm}{14}
+\bibcite{ji2023survey}{15}
+\bibcite{maynez2020faithfulness}{16}
+\bibcite{durmus2020feqa}{17}
+\bibcite{dziri2022evaluating}{18}
+\bibcite{manakul2023selfcheckgpt}{19}
+\bibcite{li2023halueval}{20}
+\bibcite{wang2023ragtruth}{21}
+\bibcite{min2023factscore}{22}
+\bibcite{xiang2025redeep}{23}
+\bibcite{sriramanan2024llmcheck}{24}
+\bibcite{reimers2019sentence}{25}
+\bibcite{xiao2023bge}{26}
+\bibcite{neelakantan2022text}{27}
+\bibcite{li2025implicitsemantics}{28}
+\bibcite{zhang2025embeddingdistance}{29}
+\bibcite{he2021deberta}{30}
+\bibcite{bowman2015snli}{31}
+\bibcite{williams2018mnli}{32}
+\bibcite{lin2004rouge}{33}
+\bibcite{zhang2020bertscore}{34}
+\bibcite{zheng2023judging}{35}
+\bibcite{brown2020gpt3}{36}
+\bibcite{ouyang2022instructgpt}{37}
+\bibcite{touvron2023llama}{38}
+\bibcite{achiam2023gpt4}{39}
+\bibcite{gal2016dropout}{40}
+\bibcite{lakshminarayanan2017ensembles}{41}
+\bibcite{kuhn2023semantic}{42}
+\bibcite{kwiatkowski2019nq}{43}
+\bibcite{yang2018hotpotqa}{44}
+\gdef \@abspage@last{12}

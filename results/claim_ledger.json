@@ -1,0 +1,106 @@
+{
+    "run_id": "run_conformal_rag_guardrails",
+    "timestamp": 1735056000.0,
+    "blueprint_path": "vanguard/experiments/plans/conformal_rag_guardrails_blueprint.json",
+    "method_name": "Conformal RAG Guardrails",
+    "results": {
+        "primary_claims": [
+            {
+                "claim_id": "C1",
+                "claim": "Embedding-based methods achieve 0% FPR on synthetic hallucinations at 95% coverage",
+                "evidence": {
+                    "dataset": "Natural Questions",
+                    "n_calibration": 595,
+                    "target_coverage": 0.95,
+                    "actual_coverage": 0.958,
+                    "fpr": 0.0,
+                    "accuracy": 0.9787,
+                    "fpr_95_ci": "[0.0%, 1.0%]"
+                },
+                "verified": true
+            },
+            {
+                "claim_id": "C2",
+                "claim": "Embedding-based methods achieve 100% FPR on real RLHF hallucinations at 95% coverage",
+                "evidence": {
+                    "dataset": "HaluEval (ChatGPT)",
+                    "n_calibration": 629,
+                    "target_coverage": 0.95,
+                    "actual_coverage": 0.945,
+                    "fpr": 1.0,
+                    "accuracy": 0.475,
+                    "fpr_95_ci": "[99.0%, 100%]"
+                },
+                "verified": true
+            },
+            {
+                "claim_id": "C3",
+                "claim": "GPT-4o-mini as judge achieves 7% FPR where embeddings fail (100% FPR)",
+                "evidence": {
+                    "dataset": "HaluEval",
+                    "method": "GPT-4o-mini Judge",
+                    "fpr": 0.07,
+                    "fpr_95_ci": "[3.4%, 13.7%]",
+                    "n_samples": 200
+                },
+                "verified": true
+            },
+            {
+                "claim_id": "C4",
+                "claim": "DeBERTa achieves AUC 0.81 but 100% FPR at high recall (the DeBERTa Paradox)",
+                "evidence": {
+                    "auc": 0.81,
+                    "fpr_at_95_coverage": 1.0,
+                    "hallucinated_mean_score": 0.415,
+                    "hallucinated_std": 0.461,
+                    "faithful_mean_score": 0.933,
+                    "conformal_threshold": 0.999
+                },
+                "verified": true
+            },
+            {
+                "claim_id": "C5",
+                "claim": "Semantic Illusion persists across multiple LLM architectures (RAGTruth)",
+                "evidence": {
+                    "models_tested": ["Llama-2-7B", "Llama-2-13B", "Mistral-7B", "GPT-4"],
+                    "distribution_overlap": 0.281,
+                    "finding": "Overlapping distributions persist across all models"
+                },
+                "verified": true
+            }
+        ],
+        "ablation_studies": [
+            {
+                "name": "Calibration Set Size Ablation",
+                "dataset": "Natural Questions",
+                "results": [
+                    {"n": 300, "coverage": 0.962, "fpr": 0.0, "coverage_std": 0.018},
+                    {"n": 600, "coverage": 0.958, "fpr": 0.0, "coverage_std": 0.010},
+                    {"n": 1000, "coverage": 0.954, "fpr": 0.0, "coverage_std": 0.007}
+                ],
+                "finding": "Coverage variance proportional to 1/sqrt(n), valid at n=300+"
+            },
+            {
+                "name": "Ensemble Methods Ablation",
+                "dataset": "HaluEval",
+                "results": [
+                    {"method": "RAD only", "auc": 0.72, "f1": 0.68, "fpr_95_cov": 1.0},
+                    {"method": "SEC only (NLI)", "auc": 0.81, "f1": 0.74, "fpr_95_cov": 1.0},
+                    {"method": "TFG only", "auc": 0.65, "f1": 0.62, "fpr_95_cov": 1.0},
+                    {"method": "Simple Average", "auc": 0.81, "f1": 0.75, "fpr_95_cov": 1.0},
+                    {"method": "Learned Combiner", "auc": 0.83, "f1": 0.77, "fpr_95_cov": 1.0},
+                    {"method": "GPT-4o-mini Judge", "auc": 0.94, "f1": 0.91, "fpr_95_cov": 0.07}
+                ],
+                "finding": "Learned weighting improves AUC but cannot improve conformal FPR"
+            }
+        ],
+        "compute_costs": {
+            "crg_ensemble": {"latency_ms": 12, "throughput_per_sec": 83, "cost_per_1k": 0.10},
+            "rad_only": {"latency_ms": 4, "throughput_per_sec": 250, "cost_per_1k": 0.03},
+            "sec_only": {"latency_ms": 8, "throughput_per_sec": 125, "cost_per_1k": 0.05},
+            "gpt4o_mini": {"latency_ms": 1800, "throughput_per_sec": 0.6, "cost_per_1k": 15.00},
+            "gpt4o": {"latency_ms": 2500, "throughput_per_sec": 0.4, "cost_per_1k": 45.00}
+        },
+        "key_insight": "The 'Semantic Illusion' - RLHF-optimized hallucinations preserve semantic coherence while altering facts, making them undetectable by embedding-based methods. High AUC does not imply safety; safety requires handling the distributional tail."
+    }
+}

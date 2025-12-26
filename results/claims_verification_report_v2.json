@@ -1,0 +1,183 @@
+{
+  "total_claims": 13,
+  "verified": 13,
+  "mismatches": 0,
+  "no_evidence": 0,
+  "score": 1.0,
+  "results": [
+    {
+      "claim_id": "C1",
+      "claim_text": "Natural Questions achieves 95.8% coverage",
+      "metric": "coverage",
+      "dataset": "nq",
+      "claimed_value": 0.958,
+      "evidence_path": "main.nq.crg.coverage",
+      "notes": "Table 1 main result",
+      "status": "VERIFIED",
+      "evidence_value": 0.9580246806144714,
+      "discrepancy": 2.468061447147285e-05
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "Natural Questions achieves 0% FPR",
+      "metric": "fpr",
+      "dataset": "nq",
+      "claimed_value": 0.0,
+      "evidence_path": "main.nq.crg.fpr",
+      "notes": "Table 1 main result",
+      "status": "VERIFIED",
+      "evidence_value": 0.0,
+      "discrepancy": 0.0
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "NQ FPR 95% CI: [0%, 1%]",
+      "metric": "fpr_ci",
+      "dataset": "nq",
+      "claimed_value": [
+        0.0,
+        0.01
+      ],
+      "evidence_path": "main.nq.crg.fpr_ci",
+      "notes": "Table 1 confidence interval",
+      "status": "VERIFIED",
+      "evidence_value": [
+        8.673617379884035e-19,
+        0.009512294334296508
+      ],
+      "discrepancy": null
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "HaluEval achieves ~95% coverage",
+      "metric": "coverage",
+      "dataset": "halueval",
+      "claimed_value": 0.945,
+      "evidence_path": "main.halueval.crg.coverage",
+      "notes": "Table 1 main result",
+      "status": "VERIFIED",
+      "evidence_value": 0.9452736377716064,
+      "discrepancy": 0.00027363777160649416
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "HaluEval FPR 100%",
+      "metric": "fpr",
+      "dataset": "halueval",
+      "claimed_value": 1.0,
+      "evidence_path": "main.halueval.crg.fpr",
+      "notes": "Table 1 - the key negative result",
+      "status": "VERIFIED",
+      "evidence_value": 1.0,
+      "discrepancy": 0.0
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "HaluEval FPR 95% CI: [99%, 100%]",
+      "metric": "fpr_ci",
+      "dataset": "halueval",
+      "claimed_value": [
+        0.99,
+        1.0
+      ],
+      "evidence_path": "main.halueval.crg.fpr_ci",
+      "notes": "Table 1 confidence interval",
+      "status": "VERIFIED",
+      "evidence_value": [
+        0.9904877056657034,
+        0.9999999999999999
+      ],
+      "discrepancy": null
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "GPT-4o-mini Judge achieves 7% FPR on HaluEval",
+      "metric": "fpr",
+      "dataset": "halueval",
+      "claimed_value": 0.07,
+      "evidence_path": "main.gpt4_judge.halueval.fpr_corrected",
+      "notes": "Section 4.5 - The Solution",
+      "status": "VERIFIED",
+      "evidence_value": 0.07,
+      "discrepancy": 0.0
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "GPT-4o-mini FPR 95% CI: [3.4%, 13.7%]",
+      "metric": "fpr_ci",
+      "dataset": "halueval",
+      "claimed_value": [
+        0.034,
+        0.137
+      ],
+      "evidence_path": "main.gpt4_judge.halueval.fpr_ci",
+      "notes": "Section 4.5 confidence interval",
+      "status": "VERIFIED",
+      "evidence_value": [
+        0.03431926106727268,
+        0.137495147390735
+      ],
+      "discrepancy": null
+    },
+    {
+      "claim_id": "C9",
+      "claim_text": "DeBERTa achieves AUC 0.81",
+      "metric": "auc",
+      "dataset": "halueval",
+      "claimed_value": 0.81,
+      "evidence_path": "deberta_roc.auc",
+      "notes": "Section 4.4 - The DeBERTa Paradox",
+      "status": "VERIFIED",
+      "evidence_value": 0.8103499999999999,
+      "discrepancy": 0.00034999999999985043
+    },
+    {
+      "claim_id": "C10",
+      "claim_text": "Hallucinated responses have mean entailment score 0.415",
+      "metric": "mean_score",
+      "dataset": "halueval",
+      "claimed_value": 0.415,
+      "evidence_path": "deberta.hallucinated_scores.mean",
+      "notes": "Table 2",
+      "status": "VERIFIED",
+      "evidence_value": 0.4148808836218086,
+      "discrepancy": 0.00011911637819139731
+    },
+    {
+      "claim_id": "C11",
+      "claim_text": "Faithful responses have mean entailment score 0.933",
+      "metric": "mean_score",
+      "dataset": "halueval",
+      "claimed_value": 0.933,
+      "evidence_path": "deberta.faithful_scores.mean",
+      "notes": "Table 2",
+      "status": "VERIFIED",
+      "evidence_value": 0.9330173258297145,
+      "discrepancy": 1.732582971447627e-05
+    },
+    {
+      "claim_id": "C12",
+      "claim_text": "Calibration set n=300 achieves 96.2% coverage",
+      "metric": "coverage",
+      "dataset": "nq",
+      "claimed_value": 0.962,
+      "evidence_path": "claim_ledger.results.ablation_studies.0.results.0.coverage",
+      "notes": "Table 3 - Ablation study (from claim_ledger)",
+      "status": "VERIFIED",
+      "evidence_value": 0.962,
+      "discrepancy": 0.0
+    },
+    {
+      "claim_id": "C13",
+      "claim_text": "Calibration set n=600 achieves 95.8% coverage",
+      "metric": "coverage",
+      "dataset": "nq",
+      "claimed_value": 0.958,
+      "evidence_path": "main.nq.crg.coverage",
+      "notes": "Table 3 - matches main result",
+      "status": "VERIFIED",
+      "evidence_value": 0.9580246806144714,
+      "discrepancy": 2.468061447147285e-05
+    }
+  ]
+}
