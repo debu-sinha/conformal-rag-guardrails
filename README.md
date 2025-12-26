@@ -27,22 +27,25 @@ We apply conformal prediction to RAG hallucination detection, demonstrating a fu
 ```
 semantic_illusion/
 ├── paper/
-│   ├── semantic_illusion.tex    # LaTeX source
-│   ├── semantic_illusion.pdf    # Compiled paper
-│   └── *.png                    # Figures (t-SNE, distributions)
+│   ├── semantic_illusion.tex         # LaTeX source
+│   └── semantic_illusion_submission.pdf # Final paper
+├── figures/
+│   ├── dist_halueval_ensemble.png    # HaluEval score distributions
+│   ├── dist_nq_ensemble.png          # NQ score distributions
+│   ├── tsne_halueval.png             # t-SNE embedding visualization
+│   └── tsne_nq.png                   # t-SNE for NQ
 ├── code/
-│   ├── crg_core.py              # Core CRG algorithm
-│   ├── crg_hybrid_detector.py   # Hybrid detection pipeline
-│   └── verify_claims.py         # Claims verification script
+│   ├── crg_core.py                   # Core CRG algorithm
+│   ├── crg_hybrid_detector.py        # Hybrid detection pipeline
+│   └── verify_claims.py              # Claims verification script
 ├── results/
-│   ├── results_with_ci.json     # Main results with CIs
-│   ├── deberta_roc_results.json # DeBERTa AUC results
-│   └── claim_ledger.json        # Curated claims
-├── submission/
-│   └── arxiv_submission.zip     # ArXiv package
-├── CONFERENCE_TARGETS.md        # Venue recommendations
-├── SUBMISSION_NOTES.md          # Submission checklist
-└── README.md                    # This file
+│   ├── results_with_ci.json          # Main results with CIs (14KB)
+│   ├── results_halueval_v3.json      # HaluEval detailed results
+│   ├── deberta_roc_results.json      # DeBERTa baseline
+│   └── sota_baselines_results.json   # Cross-encoder baseline
+├── CHANGELOG.md                      # Version history
+├── CONFERENCE_TARGETS.md             # Venue recommendations
+└── README.md
 ```
 
 ---
