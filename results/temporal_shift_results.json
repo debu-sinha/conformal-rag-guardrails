@@ -1,0 +1,35 @@
+{
+  "experiment": "temporal_shift",
+  "data_source": "fastapi_drift_tasks.json",
+  "n_tasks": 41,
+  "target_coverage": 0.95,
+  "settings": [
+    {
+      "name": "FastAPI v1 -> v1",
+      "shift_type": "none",
+      "n_test": 42,
+      "effective_coverage": 100.0,
+      "coverage_drop": -5.0,
+      "fpr": 76.0,
+      "threshold": 0.0687,
+      "status": "PASS"
+    },
+    {
+      "name": "FastAPI v1 -> v2",
+      "shift_type": "temporal",
+      "n_test": 42,
+      "effective_coverage": 95.2,
+      "coverage_drop": -0.2,
+      "fpr": 76.0,
+      "threshold": 0.0687,
+      "status": "PASS"
+    }
+  ],
+  "recalibration": {
+    "original_threshold": 0.0687,
+    "required_threshold_v2": 0.0888,
+    "threshold_drift_absolute": 0.0201,
+    "threshold_drift_relative_pct": 29.3
+  },
+  "timestamp": "2025-12-28T11:42:34.086449"
+}

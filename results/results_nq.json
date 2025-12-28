@@ -1,0 +1,27 @@
+{
+  "dataset": "nq",
+  "n_samples": 2000,
+  "n_calibration": 595,
+  "n_test": 800,
+  "target_coverage": 0.95,
+  "crg": {
+    "coverage": 0.9580246806144714,
+    "coverage_gap": -0.00802468061447148,
+    "fpr": 0.0,
+    "accuracy": 0.9787499904632568,
+    "threshold": 0.4741061329841614,
+    "score_stats": {
+      "hallucinated_mean": 0.4933929145336151,
+      "hallucinated_std": 0.02202659100294113,
+      "faithful_mean": 0.11042669415473938,
+      "faithful_std": 0.03433748334646225,
+      "distribution_overlap": 0.0
+    }
+  },
+  "baseline": {
+    "coverage": 0.9950617551803589,
+    "fpr": 0.0,
+    "accuracy": 0.9975000023841858
+  },
+  "timestamp": "2025-12-16T08:25:41.758928"
+}

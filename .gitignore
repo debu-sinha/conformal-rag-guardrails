@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+*.backup
+venv/
+.venv/
+
+# LaTeX artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+
+# Internal/Review files
+review_iterations/
+*_rigor_check.py
+*_rigor_report.md
+*.backup
+
+# Environment
+.env
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Generated/Runtime
+reports/
+vast_jobs.json
+arxiv_submission.zip

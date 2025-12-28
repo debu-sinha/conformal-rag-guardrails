@@ -1,0 +1,25 @@
+{
+  "dataset": "nq",
+  "method": "Emb-Sim (all-MiniLM-L6-v2)",
+  "n_samples": 400,
+  "n_calibration": 100,
+  "n_test": 100,
+  "target_coverage": 0.95,
+  "threshold": 0.8050616540014744,
+  "coverage": 0.98,
+  "coverage_ci": [
+    0.9299868370580063,
+    0.9944981477650318
+  ],
+  "fpr": 0.0,
+  "fpr_ci": [
+    0.0,
+    0.03699480747600191
+  ],
+  "score_stats": {
+    "faithful_mean": 0.4525349693000317,
+    "faithful_std": 0.10051361823489503,
+    "hallucinated_mean": 0.9048892010073177,
+    "hallucinated_std": 0.05585647734757223
+  }
+}

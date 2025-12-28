@@ -1,0 +1,27 @@
+{
+  "dataset": "natural_questions",
+  "description": "Table 3: Effect of calibration set size on NQ (synthetic hallucinations)",
+  "n_samples": 500,
+  "alpha": 0.05,
+  "calibration_sizes": [
+    100,
+    200,
+    300
+  ],
+  "n_trials": 3,
+  "device": "cpu",
+  "results": [
+    {
+      "n_calibration": 100,
+      "target_coverage": 0.95,
+      "mean_coverage": 0.8814102609952291,
+      "std_coverage": 0.011992484271976613,
+      "mean_fpr": 0.0,
+      "std_fpr": 0.0,
+      "mean_threshold": 0.45060856143633526,
+      "n_trials": 3,
+      "coverage_str": "88.1% +/- 1.2%",
+      "fpr_str": "0.0%"
+    }
+  ]
+}

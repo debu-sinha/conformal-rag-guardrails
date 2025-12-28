@@ -1,0 +1,31 @@
+{
+  "model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+  "dataset": "HaluEval-QA",
+  "n_faithful": 100,
+  "n_hallucinated": 100,
+  "alpha": 0.05,
+  "threshold": 0.9998985712572176,
+  "nli_threshold": 0.00010142874278240566,
+  "coverage": 0.02,
+  "coverage_ci": [
+    0.0035391680889764604,
+    0.10495686471836953
+  ],
+  "fpr": 0.0,
+  "fpr_ci": [
+    0.0,
+    0.07135003417431873
+  ],
+  "faithful_scores": {
+    "mean": 0.9330173258297145,
+    "std": 0.20162011305198901,
+    "min": 0.023779986426234245,
+    "max": 0.9996774792671204
+  },
+  "hallucinated_scores": {
+    "mean": 0.4148808836218086,
+    "std": 0.4611704166692108,
+    "min": 7.82848583185114e-05,
+    "max": 0.9998514652252197
+  }
+}

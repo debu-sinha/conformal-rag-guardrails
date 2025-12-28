@@ -1,0 +1,31 @@
+{
+  "calibration_ablation": [
+    {
+      "n_calibration": 300,
+      "target_coverage": 0.95,
+      "mean_coverage": 0.9416386087735494,
+      "std_coverage": 0.0057228110890257915,
+      "mean_fpr": 1.0,
+      "std_fpr": 0.0,
+      "n_trials": 3
+    },
+    {
+      "n_calibration": 600,
+      "target_coverage": 0.95,
+      "mean_coverage": 0.9461279511451721,
+      "std_coverage": 0.004761666651063786,
+      "mean_fpr": 1.0,
+      "std_fpr": 0.0,
+      "n_trials": 3
+    }
+  ],
+  "device": "cuda",
+  "n_samples": 2000,
+  "alpha": 0.05,
+  "calibration_sizes": [
+    300,
+    600,
+    1000
+  ],
+  "n_trials": 3
+}

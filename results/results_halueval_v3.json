@@ -1,0 +1,185 @@
+{
+  "dataset": "halueval",
+  "n_samples": 2000,
+  "n_calibration": 629,
+  "n_test": 800,
+  "target_coverage": 0.95,
+  "crg": {
+    "coverage": 0.9452736377716064,
+    "fpr": 1.0,
+    "accuracy": 0.4749999940395355,
+    "threshold": 0.05992802232503891,
+    "score_stats": {
+      "hallucinated_mean": 0.3319981098175049,
+      "hallucinated_std": 0.138932004570961,
+      "faithful_mean": 0.301994264125824,
+      "faithful_std": 0.11861777305603027,
+      "distribution_overlap": 0.28546409807355516
+    }
+  },
+  "baselines": {
+    "bart_mnli": {
+      "coverage": 0.9452736377716064,
+      "fpr": 1.0,
+      "accuracy": 0.4749999940395355
+    },
+    "deberta": {
+      "coverage": 1.0,
+      "fpr": 1.0,
+      "accuracy": 0.5024999976158142
+    },
+    "gpt4_judge": {
+      "coverage": 1.0,
+      "fpr": 1.0,
+      "accuracy": 0.5024999976158142
+    }
+  },
+  "ablation": null,
+  "error_examples": {
+    "false_positives": [
+      {
+        "query": "Are Clarence Brown and Peter Glenville of the same nationality?",
+        "response": "no",
+        "document": "Clarence Leon Brown (May 10, 1890 \u2013 August 17, 1987) was an American film director.Peter Glenville (born Peter Patrick Brabazon Browne; 28 October 19133 June 1996) was an English film and stage actor ",
+        "score": 0.49012306332588196,
+        "type": "false_positive"
+      },
+      {
+        "query": "what is the 3112 acre Pennsylvania state park that took over 11,000 to make due to the wave action of lake Erie called?",
+        "response": "Presque Isle",
+        "document": "The History of Presque Isle Pennsylvania began when Presque Isle was created by the wave action of Lake Erie over the course of the 11,000 years that have passed since the last ice age.Presque Isle St",
+        "score": 0.25746309757232666,
+        "type": "false_positive"
+      },
+      {
+        "query": "Who is the director of the upcoming Candian drama film in which the actress who made her film d\u00e9but as the love interest in Wes Anderson's \"The Darjeeling Limited\" is starring?",
+        "response": "Xavier Dolan",
+        "document": "The Death and Life of John F. Donovan is an upcoming Canadian drama film, co-written, co-produced and directed by Xavier Dolan in his English-language debut. It stars Kit Harington, Natalie Portman, J",
+        "score": 0.22240445017814636,
+        "type": "false_positive"
+      },
+      {
+        "query": "Dicksboro is located Kilkenny which is administered buy a borough with a population of how much?",
+        "response": "8,711",
+        "document": "Dicksboro is a Gaelic Athletic Association club located in Kilkenny, Ireland. The city is administered by a borough council (and a mayor), which is a level below that of city council in the local gove",
+        "score": 0.19002482295036316,
+        "type": "false_positive"
+      },
+      {
+        "query": "One of the natives of Reggiolo was last manager of what German football club?",
+        "response": "Bayern Munich",
+        "document": " Carlo Ancelotti is a native of the town, and Formula One racer Lorenzo Bandini's funeral was held here. He last was manager of German club Bayern Munich.",
+        "score": 0.2745124101638794,
+        "type": "false_positive"
+      },
+      {
+        "query": "The short story from The Wind\u2019s Twelve Quarters that won the Hugo Award in 1974 was published in what year?",
+        "response": "1973",
+        "document": " The story \"The Ones Who Walk Away from Omelas\" won the Hugo Award in 1974, while \"The Day Before the Revolution\" won the Locus and Nebula Awards in 1975.\"The Ones Who Walk Away from Omelas\" is a 1973",
+        "score": 0.3699588179588318,
+        "type": "false_positive"
+      },
+      {
+        "query": "What is the length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged?",
+        "response": "6.213 km long",
+        "document": "The 2013 Liqui Moly Bathurst 12 Hour was an endurance race for a variety of GT and touring car classes, including: GT3 cars, GT4 cars, Group 3E Series Production Cars and Dubai 24 Hour cars. The event",
+        "score": 0.3814077377319336,
+        "type": "false_positive"
+      },
+      {
+        "query": "Mark Geragos was involved in the scandal that took place in what decade?",
+        "response": "1990s",
+        "document": " He was also involved in the Whitewater controversy.The Whitewater controversy, Whitewater scandal (or simply Whitewater), was an American political episode of the 1990s that began with an investigati",
+        "score": 0.2605404555797577,
+        "type": "false_positive"
+      },
+      {
+        "query": "The Stage\" is a song by Avenged Sevenfold and the first single from their seventh studio album of the same name, which was released on which date?",
+        "response": "October 28, 2016",
+        "document": "\"The Stage\" is a song by Avenged Sevenfold and the first single from their seventh studio album of the same name, which was released on October 28, 2016.The Stage is the seventh studio album by Americ",
+        "score": 0.2946244478225708,
+        "type": "false_positive"
+      },
+      {
+        "query": "Amara Karan made her debut as the love interest in the film by the director of what nationality?",
+        "response": "American",
+        "document": "Amara Karan (born 1984) is a Sri Lankan-English actress who made her film d\u00e9but as the love interest in Wes Anderson's \"The Darjeeling Limited\".Wesley Wales Anderson (born May 1, 1969) is an American ",
+        "score": 0.4126282334327698,
+        "type": "false_positive"
+      }
+    ],
+    "false_negatives": [
+      {
+        "query": "Where is the there a small medevial castle",
+        "response": "The small medieval castle is located off Castlebay on Barra island in Scotland.",
+        "document": "Castlebay (Scottish Gaelic: \"B\u00e0gh a' Chaisteil\" ) is the main village and a community council area on the island of Barra in the Outer Hebrides, Scotland.Kisimul Castle (Scottish Gaelic: \"Caisteal Chi",
+        "score": 0.05249633640050888,
+        "type": "false_negative"
+      },
+      {
+        "query": "Was Jan Egil Storholt born in the third largest city in Norway?",
+        "response": "Jan Egil Storholt was born in one of Norway's largest cities.",
+        "document": "Jan Egil Storholt (born 13 February 1949) is a former speed skater from Norway. He was born in Trondheim. It is the third largest city in the country, with a population (2013) of 169,972 inhabitants w",
+        "score": 0.05080732703208923,
+        "type": "false_negative"
+      },
+      {
+        "query": "Garth Jennings and Lee Cheol-ha shared what occupation?",
+        "response": "Garth Jennings and Lee Cheol-ha are both involved in the production of artistic visuals.",
+        "document": "Garth Jennings (born 1972) is a British film director, screenwriter, producer and actor.Lee Cheol-ha is a South Korean film director known for his stylish portraits of the human experience.",
+        "score": 0.056157004088163376,
+        "type": "false_negative"
+      },
+      {
+        "query": "Where is the football club that Michael Langer plays for originally from?",
+        "response": "Michael Langer plays for a German football club.",
+        "document": "Michael Langer (born 6 January 1985 in Bregenz, Vorarlberg) is an Austrian footballer, who plays for FC Schalke 04.Fu\u00dfballclub Gelsenkirchen-Schalke 04 e. V., commonly known as FC Schalke 04 (] ), Sch",
+        "score": 0.0435732826590538,
+        "type": "false_negative"
+      },
+      {
+        "query": "how is Northwest Arkansas Regional Airport and Mammoth Yosemite Airport related?",
+        "response": "Northwest Arkansas Regional Airport and Mammoth Yosemite Airport are both public airports.",
+        "document": "Northwest Arkansas Regional Airport (IATA: XNA, ICAO: KXNA, FAA LID: XNA) is a public use airport in Northwest Arkansas, United States.Mammoth Yosemite Airport (IATA: MMH, ICAO: KMMH, FAA LID: MMH) is",
+        "score": 0.05646422505378723,
+        "type": "false_negative"
+      },
+      {
+        "query": "Who co-authored a 2003 biography of Muhammad Ali along with Don Atyeo, in which chapter on Ali's fight with a two-time world heavyweight champion and an Olympic gold medalist has been described as \"an absolute classic\"?",
+        "response": "Don Atyeo wrote the biography alongside Muhammad Ali, highlighting his fight with a two-time world heavyweight champion and an Olympic gold medalist as \"an absolute classic.\"",
+        "document": "Muhammad Ali: The Glory Years is a 2003 biography of Muhammad Ali co-authored by Felix Dennis and Don Atyeo. The book's coverage of Ali's boxing matches has been praised while the chapter on Ali's fig",
+        "score": 0.0444524884223938,
+        "type": "false_negative"
+      },
+      {
+        "query": "Who is married to Jim Tomlinson and released an album entitled Raconte-moi?",
+        "response": "Jim Tomlinson & Stacey Kent released Raconte-moi.",
+        "document": "Raconte-moi... is a 2010 album by jazz singer Stacey Kent. She is married to saxophonist Jim Tomlinson.",
+        "score": 0.037031907588243484,
+        "type": "false_negative"
+      },
+      {
+        "query": "What country was Daniel Awde born in?",
+        "response": "Daniel Awde was born in London.",
+        "document": "Daniel \"Dan\" Awde (born 22 June 1988 in Hammersmith, London) is a British 400 metres runner and former decathlete who has twice competed at the Summer Olympic Games.London is the capital and most popu",
+        "score": 0.05123196169734001,
+        "type": "false_negative"
+      },
+      {
+        "query": "Der Mond was composed by the man who was best known for what cantata?",
+        "response": "Der Mond was composed by Carl Orff.",
+        "document": "Der Mond (\"The Moon\") is an opera in one act by Carl Orff based on a Grimm's fairy tale) with a libretto by the composer.Carl Heinrich Maria Orff (] ; (1895--)10 1895 \u2013 (1982--)29 1982 ) was a German ",
+        "score": 0.055521685630083084,
+        "type": "false_negative"
+      },
+      {
+        "query": "Are Dan McCafferty and Eddie Vedder both singers?",
+        "response": "Dan McCafferty is a Scottish vocalist, while Eddie Vedder is an American musician.",
+        "document": "William Daniel \"Dan\" McCafferty (born 14 October 1946, Dunfermline, Scotland) is a Scottish vocalist, best known as the lead singer for the Scottish hard rock band Nazareth from its founding in 1968 t",
+        "score": 0.034933656454086304,
+        "type": "false_negative"
+      }
+    ]
+  },
+  "timestamp": "2025-12-21T20:00:50.379236"
+}
